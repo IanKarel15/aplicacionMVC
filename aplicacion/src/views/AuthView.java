@@ -34,83 +34,88 @@ public class AuthView extends JFrame {
 
         // Etiqueta de título
         JLabel titulo = new JLabel("Iniciar sesión");
-        titulo.setBounds(145, 60, 250, 40);
-        titulo.setFont(new Font("Arial", Font.BOLD, 35));
+        titulo.setFont(new Font("Tahoma", Font.PLAIN, 37));
+        titulo.setBounds(140, 60, 250, 40);
+        //titulo.setFont(new Font("Arial", Font.BOLD, 35));
         panelLogin.add(titulo);
 
         // label de correo
         JLabel lblCorreo = new JLabel("Correo:");
         lblCorreo.setBounds(50, 160, 100, 25);
+        lblCorreo.setFont(new Font("Tahoma", Font.PLAIN, 14));
         panelLogin.add(lblCorreo);
         
         // Campo de correo
         campoCorreo = new JTextField();
-        campoCorreo.setBounds(150, 160, 250, 25);
+        campoCorreo.setBounds(150, 160, 250, 30);
         campoCorreo.setToolTipText("Ingrese su correo");
         panelLogin.add(campoCorreo);
 
         // label de contraseña
         JLabel lblContrasena = new JLabel("Contraseña:");
-        lblContrasena.setBounds(50, 210, 100, 25);
+        lblContrasena.setBounds(50, 210, 100, 30);
+        lblContrasena.setFont(new Font("Tahoma", Font.PLAIN, 14));
         panelLogin.add(lblContrasena);
 
         // Campo de contraseña
         campoContrasena = new JPasswordField();
-        campoContrasena.setBounds(150, 210, 250, 25);
+        campoContrasena.setBounds(150, 210, 250, 30);
         campoContrasena.setEchoChar('*');
         campoContrasena.setToolTipText("Ingrese su contraseña");
         panelLogin.add(campoContrasena);
 
         // CheckBox de recordar contraseña
         JCheckBox chkRecordarContrasena = new JCheckBox("Recordar contraseña");
-        chkRecordarContrasena.setBounds(170, 270, 150, 25);
+        chkRecordarContrasena.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        chkRecordarContrasena.setBounds(260, 250, 150, 25);
         chkRecordarContrasena.setBackground(Color.WHITE);
+        chkRecordarContrasena.setFocusPainted(false);
         panelLogin.add(chkRecordarContrasena);
 
         // Boton de inicio de sesion
         botonIS = new JButton("Iniciar sesión");
-        botonIS.setBounds(130, 330, 220, 47);
+        botonIS.setBounds(130, 340, 220, 47);
         botonIS.setBackground(Color.black);
+        botonIS.setFont(new Font("Tahoma", Font.PLAIN, 17));
         botonIS.setForeground(Color.white);
         botonIS.setFocusPainted(false);
         botonIS.setBorderPainted(false); 
         panelLogin.add(botonIS);
         botonIS.addActionListener(e -> {
-        	String correo = getCorreo();
+            String correo = getCorreo();
             String contraseña = getContraseña();
-            
-            if (correo.isEmpty() && contraseña.isEmpty() ) {//campos estan vacios
-            	campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED,2));
-            	campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED,2));
+
+            if (correo.isEmpty() && contraseña.isEmpty()) { // ambos vacíos
+                campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
                 return;
             }
-            if (correo.isEmpty() ) {//campo correo esta vacio
-            	campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED,2));
+            if (correo.isEmpty()) { // correo vacío
+                campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
                 return;
             }
-            if(contraseña.isEmpty()){//campo contraseña esta vacio
-            	campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED,2));
+            if (contraseña.isEmpty()) { // contraseña vacía
+                campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
                 return;
-            }   
-            if(controlador.verificarCuenta(correo, contraseña)) {
-            	//aqui mandaria al usuario a su cuenta
             }
 
-            else {
-            	campoCorreo.setBorder(BorderFactory.createLineBorder(Color.red,2));
-            	campoContrasena.setBorder(BorderFactory.createLineBorder(Color.red,2));
-            	
-                return;
-                
+            if (controlador.verificarCuenta(correo, contraseña)) { 
+                campoCorreo.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+                campoContrasena.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+            } else {
+                campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos.");
             }
-            });
+        });
         
         
                 
         
         //boton crear cuenta
         JButton botonCrearCuenta = new JButton("¿No tiene una cuenta? Cree una");
-        botonCrearCuenta.setBounds(130, 400, 220, 47);
+        botonCrearCuenta.setFont(new Font("Tahoma", Font.PLAIN, 13));
+        botonCrearCuenta.setBounds(126, 410, 220, 47);
         botonCrearCuenta.setBackground(Color.white);
         botonCrearCuenta.setForeground(Color.BLACK);
         botonCrearCuenta.setFocusPainted(false);  

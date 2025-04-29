@@ -1,5 +1,7 @@
 package controllers;
 
+import java.io.IOException;
+
 import models.AuthModel;
 import views.AuthView;
 
@@ -18,12 +20,13 @@ public class AuthController {
     }
     
     //metodo que verifica si las contraseñas son correctas haciendo una consulta de la base de datos
-    public boolean verificarCuenta(String correo,String Contraseña) {
-    	String correoV = view.getCorreo();
-    	String contraseñaV = view.getContraseña();
-    	
-    	return model.login(correoV, contraseñaV);
-
     
+    public boolean verificarCuenta(String correoV, String contraseñaV) {
+        return model.verificarContraseñas(correoV, contraseñaV);
+    }
+    
+    public void registrarUsuario(String nombre,String apellidos,String empresa,String ambito,String cargo,String usuario, String contrasena, String correo) {
+       
+        model.añadirCuenta(nombre, apellidos, empresa, ambito, cargo, usuario, contrasena, correo);
     }
 }

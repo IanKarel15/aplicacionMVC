@@ -1,0 +1,15 @@
+Ian Karel Alvarado,iankarel@gmail.com,Masculino,Progreso,Password
+Juan Pérez,juanperez@gmail.com,Masculino,Cuernavaca,1234
+Ana García,anagarcia@gmail.com,Femenino,Guadalajara,abc123
+Carlos López,carloslopez@gmail.com,Masculino,Tijuana,contraseña
+María Rodríguez,mariarodriguez@gmail.com,Femenino,Mexico,pass1234
+José Martínez,josemartinez@gmail.com,Masculino,Campeche,qwerty
+Laura Fernández,laurafernandez@gmail.com,Femenino,Culiacán,password123
+Luis González,luisgonzalez@gmail.com,Masculino,Monterrey,12345
+Sofía Ramírez,sofiaramirez@gmail.com,Femenino,Puebla,123456
+David Sánchez,davidsanchez@gmail.com,Masculino,León,123qwe
+holaallw,qwe,qeqe,Tecnología,eqeqe,qeqeqe,123,qeq
+holaadad,adad,adad,Tecnología,adad,adad,123,afaf
+holaklawdkla,adad,adad,Tecnología,adad,adad,123,all
+Romina,Barrios Rosales,Nokia,Tecnología,Front,mina123,123,mina@gmail.com
+ian,karel,pepe,Comercio,front,iankarel15,123,123
