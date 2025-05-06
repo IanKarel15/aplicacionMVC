@@ -102,6 +102,9 @@ public class AuthView extends JFrame {
             if (controlador.verificarCuenta(correo, contraseña)) { 
                 campoCorreo.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
                 campoContrasena.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+                InicioView ventanaCuenta = new InicioView(controlador);
+                ventanaCuenta.setVisible(true);
+                dispose();
             } else {
                 campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
                 campoContrasena.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
