@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camiseta básica",
+    "precio": 199.90,
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "nombre": "Pantalón vaquero",
+    "precio": 499.00,
+    "stock": 20
+  },
+  {
+    "id": 3,
+    "nombre": "Zapatillas deportivas",
+    "precio": 899.50,
+    "stock": 15
+  },
+  {
+    "id": 4,
+    "nombre": "Gorra de béisbol",
+    "precio": 129.99,
+    "stock": 35
+  },
+  {
+    "id": 5,
+    "nombre": "Mochila urbana",
+    "precio": 349.00,
+    "stock": 10
+  }
+]

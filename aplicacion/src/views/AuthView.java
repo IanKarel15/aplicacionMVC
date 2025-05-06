@@ -3,6 +3,8 @@ package views;
 import javax.swing.*;
 
 import controllers.AuthController;
+import controllers.ProductController;
+import models.ProductModel;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -102,8 +104,9 @@ public class AuthView extends JFrame {
             if (controlador.verificarCuenta(correo, contraseña)) { 
                 campoCorreo.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
                 campoContrasena.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
-                InicioView ventanaCuenta = new InicioView(controlador);
-                ventanaCuenta.setVisible(true);
+                ProductModel modelo = new ProductModel();
+                ProductView vista = new ProductView();
+                new ProductController(modelo, vista);
                 dispose();
             } else {
                 campoCorreo.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
