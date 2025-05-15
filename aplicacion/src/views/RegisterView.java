@@ -19,15 +19,17 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import controllers.AuthController;
+import controllers.RegisterController;
 
 public class RegisterView  extends JFrame{
 	
-	public AuthController controlador;
+	public RegisterController controlador;
+	public AuthController controlador2;
 	private JTextField campoNombre, campoApellidos, campoEmpresa, campoCargo, campoUsuario, campoCorreo;
     private JComboBox<String> comboAmbito;
     private JPasswordField campoContrasena, campoRepetirContrasena;
 
-	public RegisterView(AuthController controlador) {
+	public RegisterView(RegisterController controlador) {
         this.controlador = controlador;
         
       //configurcion de JFrame 
@@ -177,7 +179,7 @@ public class RegisterView  extends JFrame{
                 	
 					controlador.registrarUsuario(nombre, apellidos, empresa, ambito, cargo, usuario, contrasena, correo);
 					JOptionPane.showMessageDialog(null, "Cuenta creada con exito", "Cuenta creada con exito", JOptionPane.OK_OPTION);
-                    InicioView ventanaCuenta = new InicioView(controlador);
+                    InicioView ventanaCuenta = new InicioView(controlador2);
                     ventanaCuenta.setVisible(true);
                     dispose();
                 }

@@ -25,8 +25,5 @@ public class AuthController {
         return model.verificarContraseñas(correoV, contraseñaV);
     }
     
-    public void registrarUsuario(String nombre,String apellidos,String empresa,String ambito,String cargo,String usuario, String contrasena, String correo) {
-       
-        model.añadirCuenta(nombre, apellidos, empresa, ambito, cargo, usuario, contrasena, correo);
-    }
+    
 }

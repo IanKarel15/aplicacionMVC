@@ -4,7 +4,9 @@ import javax.swing.*;
 
 import controllers.AuthController;
 import controllers.ProductController;
+import controllers.RegisterController;
 import models.ProductModel;
+import models.RegisterModel;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -114,10 +116,7 @@ public class AuthView extends JFrame {
                 JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos.");
             }
         });
-        
-        
-                
-        
+
         //boton crear cuenta
         JButton botonCrearCuenta = new JButton("¿No tiene una cuenta? Cree una");
         botonCrearCuenta.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -128,9 +127,9 @@ public class AuthView extends JFrame {
         botonCrearCuenta.setBorderPainted(false); 
         panelLogin.add(botonCrearCuenta);
         botonCrearCuenta.addActionListener(e -> {
-            RegisterView ventanaRegistro = new RegisterView(controlador);
-            ventanaRegistro.setVisible(true);
             dispose();
+            UserView vista = new UserView();
+            
         });
         
         add(panelLogin);

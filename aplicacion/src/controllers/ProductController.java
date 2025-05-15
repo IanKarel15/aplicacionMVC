@@ -2,9 +2,14 @@ package controllers;
 
 import models.ProductModel;
 import views.ProductView;
+import views.Producto;
 
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -41,4 +46,23 @@ public class ProductController {
             vista.mostrarError("Error leyendo productos.json:\n" + ex.getMessage());
         }
     }
+
+    public void agregarProducto(Producto nuevo) throws IOException {
+        JSONObject obj = new JSONObject();
+        obj.put("id", nuevo.getId());
+        obj.put("nombre", nuevo.getNombre());
+        obj.put("precio", nuevo.getPrecio());
+        obj.put("stock", nuevo.getStock());
+
+        modelo.agregarProducto(obj);
+    }
+   
+    
+
+   
+    	
+    	
+
+
+    
 }

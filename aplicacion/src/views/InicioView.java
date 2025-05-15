@@ -21,6 +21,7 @@ public class InicioView extends JFrame {
     private AuthController controlador;
 
     public InicioView(AuthController controlador) {
+    	
         this.controlador = controlador;
         setTitle("HomeView");
         setSize(600, 500);
@@ -33,8 +34,6 @@ public class InicioView extends JFrame {
         panelInicio.setBackground(Color.white);
         panelInicio.setLayout(null);
         add(panelInicio);
-
-       
 
         JButton btnUsuarios = new JButton("Usuarios");
         btnUsuarios.setBounds(20,20,175, 30);
